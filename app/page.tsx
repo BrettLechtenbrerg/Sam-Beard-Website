@@ -14,6 +14,7 @@ const aiTools = [
     cta: 'Click Here To Try It',
     href: 'https://voiceassistant.gift-connect.org/org/',
     icon: Bot,
+    image: 'https://voiceassistant.gift-connect.org/assets/sammie-DcXPA9Jh.png',
   },
   {
     title: 'My AI Song Generator',
@@ -21,6 +22,7 @@ const aiTools = [
     cta: 'Click Here To Make A Song',
     href: 'https://newsonggenerator.gift-connect.org/',
     icon: Music,
+    image: 'https://newsonggenerator.gift-connect.org/static/geno_transparent.png',
   },
   {
     title: 'My AI Story Generator',
@@ -28,6 +30,7 @@ const aiTools = [
     cta: 'Click Here To Make A Story',
     href: 'https://storygenerator.gift-connect.org/',
     icon: BookOpen,
+    image: 'https://storygenerator.gift-connect.org/images/stacy_logo.png',
   },
 ];
 
@@ -114,10 +117,22 @@ export default function Home() {
             {aiTools.map((tool, index) => (
               <ScaleIn key={tool.title} delay={index * 0.15}>
                 <div className="tool-card h-full flex flex-col items-center text-center">
-                  {/* Icon */}
-                  <div className="feature-icon mb-6">
-                    <tool.icon className="w-7 h-7 text-black" />
-                  </div>
+                  {/* Image or Icon */}
+                  {tool.image ? (
+                    <div className="w-32 h-32 mb-6 rounded-2xl overflow-hidden border-2 border-yellow-400/30">
+                      <Image
+                        src={tool.image}
+                        alt={tool.title}
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="feature-icon mb-6">
+                      <tool.icon className="w-7 h-7 text-black" />
+                    </div>
+                  )}
 
                   {/* Content */}
                   <h3 className="text-2xl font-bold text-white mb-3">
