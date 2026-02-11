@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-32 pb-16">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 text-center pt-24 sm:pt-32 pb-12 sm:pb-16">
           {/* Headline */}
           <FadeIn direction="up">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white">
@@ -97,15 +97,15 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════════════
           AI TOOLS SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section id="ai-tools" className="relative w-full py-24 lg:py-32">
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section id="ai-tools" className="relative w-full py-16 sm:py-24 lg:py-32">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Section Header */}
           <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
                 AI For Good
               </h2>
-              <p className="text-xl text-yellow-400 font-medium mb-6">
+              <p className="text-lg sm:text-xl text-yellow-400 font-medium mb-6">
                 Tools For Parents And Caregivers
               </p>
               <div className="section-divider" />
@@ -113,7 +113,7 @@ export default function Home() {
           </FadeIn>
 
           {/* Tools Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             {aiTools.map((tool, index) => (
               <ScaleIn key={tool.title} delay={index * 0.15}>
                 <div className="tool-card h-full flex flex-col items-center text-center">
@@ -164,18 +164,18 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════════════
           MUSIC & EDUTAINMENT SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full py-24 lg:py-32">
+      <section className="relative w-full py-16 sm:py-24 lg:py-32">
         {/* Background Accent */}
         <div className="absolute inset-0 mesh-gradient opacity-50" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Section Header */}
           <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
                 Music & Edutainment
               </h2>
-              <p className="text-xl text-yellow-400 font-medium mb-6">
+              <p className="text-lg sm:text-xl text-yellow-400 font-medium mb-6">
                 Fun Ways to Lifelong Learning
               </p>
               <div className="section-divider" />
@@ -183,7 +183,7 @@ export default function Home() {
           </FadeIn>
 
           {/* Two Videos Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
             {/* Video 1 - Abujubuju baby */}
             <FadeIn direction="left">
               <div className="video-container aspect-video overflow-hidden">
@@ -245,11 +245,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════════════
           THINK BIG CTA SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full py-24 lg:py-32">
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="relative w-full py-16 sm:py-24 lg:py-32">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           <FadeIn direction="up">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4">
                 <span className="text-gradient">Think Big!</span>
                 <span className="text-white"> Yes We Can!</span>
               </h2>
@@ -276,12 +276,12 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════════════
           GET STARTED / PARTNERS SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full py-24 lg:py-32">
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="relative w-full py-16 sm:py-24 lg:py-32">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Section Header */}
           <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
                 Get Started
               </h2>
               <div className="section-divider" />
@@ -289,10 +289,10 @@ export default function Home() {
           </FadeIn>
 
           {/* Feature Images - Stacked Full Width */}
-          <div className="space-y-12 max-w-6xl mx-auto">
+          <div className="space-y-6 sm:space-y-12 max-w-6xl mx-auto">
             {/* Six Loving Habits */}
             <FadeIn direction="up">
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/six-loving-habits.webp"
                   alt="Six Loving Habits - Science Proven: Speak, Sing, Read, Play, Count, Serve & Return"
@@ -305,7 +305,7 @@ export default function Home() {
 
             {/* Legacy of Literacy */}
             <FadeIn direction="up" delay={0.2}>
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/legacy-of-literacy.webp"
                   alt="Legacy of Literacy"
@@ -322,14 +322,14 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════════════
           ADVISORY COUNCIL SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full py-24 lg:py-32">
+      <section className="relative w-full py-16 sm:py-24 lg:py-32">
         <div className="absolute inset-0 mesh-gradient opacity-30" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Section Header */}
           <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
                 Advisory Council
               </h2>
               <div className="section-divider" />
@@ -337,9 +337,9 @@ export default function Home() {
           </FadeIn>
 
           {/* Advisory Council Images - Stacked Full Width */}
-          <div className="space-y-12 max-w-6xl mx-auto">
+          <div className="space-y-6 sm:space-y-12 max-w-6xl mx-auto">
             <FadeIn direction="up">
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/advisory-council-1.webp"
                   alt="Advisory Council Member 1"
@@ -351,7 +351,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.1}>
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/advisory-council-2.webp"
                   alt="Advisory Council Member 2"
@@ -363,7 +363,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.15}>
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/advisory-council-3.webp"
                   alt="Advisory Council Member 3"
@@ -375,7 +375,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.2}>
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/advisory-council-4.webp"
                   alt="Advisory Council Member 4"
@@ -387,7 +387,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.25}>
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/advisory-council-5.webp"
                   alt="Advisory Council Member 5"
@@ -399,7 +399,7 @@ export default function Home() {
             </FadeIn>
 
             <FadeIn direction="up" delay={0.3}>
-              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
                 <Image
                   src="/images/advisory-council-6.webp"
                   alt="Advisory Council Member 6"

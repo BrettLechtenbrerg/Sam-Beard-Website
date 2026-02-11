@@ -306,6 +306,19 @@
 /* ─────────────────────────────────────────────────────────────────────────────
    Responsive & Mobile Optimization
    ─────────────────────────────────────────────────────────────────────────────*/
+
+/* Safe area insets for notched devices (iPhone X+) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .footer-glass {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-width: 768px) {
   .glass-card {
     @apply rounded-xl p-4;
@@ -320,7 +333,7 @@
   }
 
   .btn-glow {
-    @apply px-6 py-3 text-sm;
+    @apply px-5 py-3 text-sm;
   }
 
   .btn-primary,
@@ -333,11 +346,25 @@
     max-width: 100vw;
     overflow-x: hidden;
   }
+
+  /* Better touch targets */
+  a, button {
+    min-height: 44px;
+  }
+
+  /* Reduce hover effects on touch devices */
+  .glass-card:hover {
+    transform: none;
+  }
+
+  .tool-card:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 640px) {
   .glass-card {
-    @apply p-4;
+    @apply p-3;
   }
 
   .tool-card {
@@ -346,7 +373,33 @@
 
   /* Stack grids on small screens */
   .grid {
-    gap: 1rem;
+    gap: 0.75rem;
+  }
+
+  /* Smaller section dividers on mobile */
+  .section-divider {
+    @apply w-16 h-0.5;
+  }
+
+  /* Video containers need less padding */
+  .video-container {
+    @apply rounded-xl;
+  }
+}
+
+/* Very small screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+  .glass-card {
+    @apply p-2;
+  }
+
+  .btn-glow {
+    @apply px-4 py-2.5 text-xs;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    @apply px-3 py-2 text-xs;
   }
 }
 
