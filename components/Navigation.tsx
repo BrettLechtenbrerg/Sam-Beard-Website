@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 
@@ -44,15 +45,16 @@ export default function Navigation() {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 400 }}
-                className="flex items-center gap-3"
+                className="flex items-center"
               >
-                {/* SB Logo Placeholder - Replace with actual logo */}
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center font-bold text-black text-xl">
-                  SB
-                </div>
-                <span className="text-xl font-bold text-white hidden sm:block">
-                  Sam Beard
-                </span>
+                <Image
+                  src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/tr3jkIX12hM9NJuWV5zO/media/68f4d459e374a65e59e60dd0.webp"
+                  alt="Sam Beard Logo"
+                  width={180}
+                  height={60}
+                  className="h-12 sm:h-14 w-auto object-contain"
+                  priority
+                />
               </motion.div>
             </Link>
 

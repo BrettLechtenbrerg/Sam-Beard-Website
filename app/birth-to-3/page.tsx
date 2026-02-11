@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, Heart, Baby, BookHeart } from 'lucide-react';
+import Image from 'next/image';
+import { Sparkles, Heart, Baby, BookHeart, User } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import ScaleIn from '@/components/animations/ScaleIn';
 
@@ -9,9 +10,9 @@ export default function BirthToThree() {
   return (
     <>
       {/* ═══════════════════════════════════════════════════════════════════════════
-          HERO SECTION
+          HERO SECTION - Sam Beard Photo + Quote
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black" />
 
@@ -39,67 +40,84 @@ export default function BirthToThree() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center pt-32 pb-20">
-          {/* Badge */}
-          <FadeIn direction="up">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/10 backdrop-blur-sm border border-yellow-400/30 text-yellow-400 text-sm font-medium">
-              <Baby className="w-4 h-4" />
-              Early Childhood Development
-            </span>
-          </FadeIn>
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 pt-32 pb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Sam's Photo */}
+            <FadeIn direction="left">
+              <div className="flex justify-center lg:justify-end">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-2xl overflow-hidden border border-yellow-400/20 shadow-2xl shadow-yellow-400/10">
+                  <Image
+                    src="/images/sam-beard.png"
+                    alt="Sam Beard"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </FadeIn>
 
-          {/* Headline */}
-          <FadeIn direction="up" delay={0.1}>
-            <h1 className="mt-8 text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-gradient">Birth To 3</span>
-            </h1>
-          </FadeIn>
-
-          {/* Subheadline */}
-          <FadeIn direction="up" delay={0.2}>
-            <p className="mt-6 text-lg sm:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-              The most critical years for brain development. Learn how GIFT Connect
-              supports parents and caregivers during this foundational period.
-            </p>
-          </FadeIn>
+            {/* Quote Section */}
+            <FadeIn direction="right">
+              <div className="text-center lg:text-left">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+                  Sam Beard
+                </h1>
+                <p className="text-white/70 text-lg sm:text-xl leading-relaxed">
+                  {/* Quote placeholder - Replace with actual quote from current site */}
+                  &quot;The first three years of a child&apos;s life are the most critical for brain development.
+                  Every interaction, every moment of love and care shapes who they will become.
+                  Through GIFT Connect, we&apos;re empowering parents and caregivers with the tools
+                  they need to give every child the best possible start in life.&quot;
+                </p>
+              </div>
+            </FadeIn>
+          </div>
         </div>
-
-        {/* Bottom Gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════════
-          CONTENT SECTIONS - Images with Animations
+          AMERICA IN CRISIS SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
-      <section className="relative w-full py-16 lg:py-24">
-        <div className="w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          {/* First Image Section - Fade from Left */}
-          <FadeIn direction="left" className="mb-16">
-            <div className="glass-card overflow-hidden">
-              {/* Placeholder for actual image content */}
-              <div className="aspect-[16/9] bg-gradient-to-br from-yellow-900/20 via-black to-yellow-900/10 flex items-center justify-center">
-                <div className="text-center">
-                  <Heart className="w-16 h-16 text-yellow-400/40 mx-auto mb-4" />
-                  <p className="text-white/40 text-lg">Birth To 3 Content Image 1</p>
-                  <p className="text-white/30 text-sm mt-2">Replace with actual image</p>
-                </div>
-              </div>
+      <section className="relative w-full py-24 lg:py-32">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          {/* Section Header */}
+          <FadeIn direction="up">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+                America in Crisis
+              </h2>
+              <div className="section-divider" />
             </div>
           </FadeIn>
 
-          {/* Second Image Section - Fade from Right */}
-          <FadeIn direction="right">
-            <div className="glass-card overflow-hidden">
-              {/* Placeholder for actual image content */}
-              <div className="aspect-[16/9] bg-gradient-to-br from-yellow-900/10 via-black to-yellow-900/20 flex items-center justify-center">
-                <div className="text-center">
-                  <BookHeart className="w-16 h-16 text-yellow-400/40 mx-auto mb-4" />
-                  <p className="text-white/40 text-lg">Birth To 3 Content Image 2</p>
-                  <p className="text-white/30 text-sm mt-2">Replace with actual image</p>
-                </div>
+          {/* Help America Images - Stacked Full Width */}
+          <div className="space-y-12 max-w-6xl mx-auto">
+            <FadeIn direction="up">
+              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+                <Image
+                  src="/images/help-america-1.webp"
+                  alt="Help America 1"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-xl"
+                />
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.2}>
+              <div className="glass-card p-6 overflow-hidden hover:border-yellow-400/30">
+                <Image
+                  src="/images/help-america-2.webp"
+                  alt="Help America 2"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto rounded-xl"
+                />
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
