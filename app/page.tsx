@@ -6,6 +6,142 @@ import { ArrowRight, Sparkles, Bot, Music, BookOpen, Play } from 'lucide-react';
 import FadeIn from '@/components/animations/FadeIn';
 import ScaleIn from '@/components/animations/ScaleIn';
 
+// Advisory Council data - 22 top-level USA and global early childhood development leaders
+const councilMembers = [
+  {
+    name: 'Sam Beard',
+    title: 'Founder',
+    bio: 'Over 50 years in public service. Began work with Senator Robert Kennedy. Created and ran programs with 8 Presidents of the U.S., including 6 initiatives. Each initiative changed over 50 million lives. Created the Jefferson Awards with Jacqueline Kennedy Onassis and Senator Robert Taft, Jr.',
+    image: '/images/council/sam-beard.png',
+  },
+  {
+    name: 'David Bray',
+    title: 'Principal, LeadDoAdapt Ventures, Inc.',
+    bio: 'Loomis Innovation Council Member & Distinguished Fellow, Henry S. Stimson Center, Business Executives for National Security.',
+    image: '/images/council/david-bray.png',
+  },
+  {
+    name: 'Dave Dennis',
+    title: 'President Emeritus',
+    bio: 'President Emeritus of Specialty Contractors & Associates in Gulfport. Dennis has been in leadership positions with many professional and civic organizations. He is Chair of the Board of the Children\'s Foundation of Mississippi and was a significant leader in creating the Mississippi Miracle.',
+    image: '/images/council/dave-dennis.png',
+  },
+  {
+    name: 'Bill Milliken',
+    title: 'Founder & Chairman, Communities in Schools',
+    bio: 'One of America\'s largest non-profits impacting underserved youth from kindergarten through grade 12.',
+    image: '/images/council/bill-milliken.png',
+  },
+  {
+    name: 'Donna Norton',
+    title: 'Executive VP & Chief Advancement & Strategy Officer, MomsRising',
+    bio: 'Founding Member. Norton is an innovator and strategic manager with more than 20 years of experience working on women\'s rights and gender equality on a variety of policy challenges. Norton has one million activists and will help guide GC.',
+    image: '/images/council/donna-norton.png',
+  },
+  {
+    name: 'Sarah Rittling',
+    title: 'Executive Director, First Five Years Fund',
+    bio: 'A major bipartisan leadership organization in America working to raise federal funding for early childhood development.',
+    image: '/images/council/sarah-rittling.png',
+  },
+  {
+    name: 'Mark Sadovnick',
+    title: 'Managing Partner, 5th Element Group',
+    bio: 'A leading, global collaborative organization for over 6 years. One major initiative is AI for Good and he is committed to help guide and advocate for GC\'s AI initiative.',
+    image: '/images/council/mark-sadovnick.png',
+  },
+  {
+    name: 'Eric Sapp',
+    title: 'Founder & President, Public Democracy, Inc.',
+    bio: 'Entrepreneur. A nationally-recognized leader in the global "Data for Good" movement. Pioneered breakthroughs in AI and empathy-based machine learning. Non-resident Senior Fellow at Atlantic Council.',
+    image: '/images/council/eric-sapp.png',
+  },
+  {
+    name: 'Maria Snyder',
+    title: 'Artist, Eco-Entrepreneur, Author & Designer',
+    bio: 'Founder Eco Boys and Girls. She is committed to this and ECD. In recent years, Maria has focused her many creative talents on raising environmental awareness and positively impacting how boys and girls see and connect with the earth.',
+    image: '/images/council/maria-snyder.png',
+  },
+  {
+    name: 'Jose Antonio Tijerino',
+    title: 'President & CEO, Hispanic Heritage Foundation',
+    bio: 'A national nonprofit focused on education, workforce, social impact, and culture through innovative leadership. (38 cities across America with important Hispanic populations.) Executive Producer, Hispanic Heritage Awards at the Kennedy Center.',
+    image: '/images/council/jose-antonio-tijerino.png',
+  },
+  {
+    name: 'Cindy Minton Walker',
+    title: 'Early Childhood Development Leader',
+    bio: 'Over 30 years pioneering and leading the fight for Early Childhood Development. Began as a major leader in South Carolina, and then moved to Mississippi where she served as project director South MS PreK4Wards and helped build "The Mississippi Miracle."',
+    image: '/images/council/cindy-minton-walker.png',
+  },
+  {
+    name: 'Rebecca Kelley',
+    title: 'Executive VP of Advocacy & Community Development, Waterford.org',
+    bio: '$70 Million non-profit operating in 70+ communities nationwide.',
+    image: '/images/council/rebecca-kelley.png',
+  },
+  {
+    name: 'Terry Lierman',
+    title: 'Former Staff Director, US Senate Committee on Appropriations',
+    bio: 'Chief of Staff to the US House Majority Leader, a long-time advocate for medical research, and candidates for Congressional and presidential offices.',
+    image: '/images/council/terry-lierman.png',
+  },
+  {
+    name: 'Dr. Suzanne Mayo',
+    title: 'Professor, Grambling State University',
+    bio: 'Early Childhood Development Professor in Louisiana. Special focus Birth to 3. Plus, hands-on training of underserved mothers building empowerment and working with newborns and toddlers. Long-term Black leader at the highest levels with leading Black organizations across America.',
+    image: '/images/council/dr-suzanne-mayo.png',
+  },
+  {
+    name: 'Matthew Melmed',
+    title: 'Executive Director, ZERO TO THREE',
+    bio: 'One of America\'s science-based and proven ECD leaders for over 40 years.',
+    image: '/images/council/matthew-melmed.png',
+  },
+  {
+    name: 'Libby Doggett, PhD',
+    title: 'Former Deputy Assistant Secretary, USDOE',
+    bio: 'Leveraging 40+ years of leadership honed through work in schools, Head Start, and childcare Libby has worked to improve the well-being of children in Texas. She serves on numerous national, state, and local boards that impact the quality of life of our nation\'s youngest children.',
+    image: '/images/council/libby-doggett.png',
+  },
+  {
+    name: 'Kathy Eldon',
+    title: 'Author, Film Producer, Journalist',
+    bio: 'Inspired by the life of her son Dan Eldon, Kathy founded Creative Visions Foundation and Creative Visions Productions which for over 20 years have leveraged the power of Media and the Arts to ignite positive social change.',
+    image: '/images/council/kathy-eldon.png',
+  },
+  {
+    name: 'Dr. Cyndie Hatcher, MD, MPH',
+    title: 'Board Certified Pediatrician',
+    bio: 'Former attending physician at Boston Medical Center. Lead the team-based care pilot program innovating improved care delivery models for children. With Dr. Barry Zuckerman and WGBH created "Small Moments, Big Impact," a phone app and online tool that helps improve empathy and attachment within the mother-baby dyad.',
+    image: '/images/council/dr-cyndie-hatcher.png',
+  },
+  {
+    name: 'Bawa Jain',
+    title: 'Founder President, The Centre for Responsible Leadership',
+    bio: 'Bawa Jain served as Secretary General, World Council of Religious Leaders and in 2000, led the United Nations\' Millennium World Peace Summit of Religious and Spiritual Leaders.',
+    image: '/images/council/bawa-jain.png',
+  },
+  {
+    name: 'Carolyn Wall',
+    title: 'Senior Media Executive',
+    bio: 'Over thirty years of experience as a Senior Media Executive in publishing, broadcasting, branding, and strategic content marketing. Her former roles include VP/GM of New York TV flagship Fox5; Publisher of New York Magazine; EVP of Murdoch Magazines, and US President of Narrowstep, a broadband TV company based in the UK.',
+    image: '/images/council/carolyn-wall.png',
+  },
+  {
+    name: 'Kathryn Way',
+    title: 'Early Childhood Development Expert',
+    bio: 'Over 30 years of experience in early childhood development. Represented Delaware Governor Mike Castle to the National Governor\'s Association. NGA created a breakthrough "first 60 months" report in the 1980\'s. Special Assistance to President Bill Clinton for Early Childhood Development.',
+    image: '/images/council/kathryn-way.png',
+  },
+  {
+    name: 'Dr. Barry Zuckerman',
+    title: 'Professor & Chair Emeritus, Boston University Medicine',
+    bio: 'Department of Pediatrics, Boston Medical Center. Co-Founder: HealthLeads (Healthy Steps). Co-Founder: Reach Out & Read. Co-Founder and Co-Director: "Small Moments, Big Impact"',
+    image: '/images/council/dr-barry-zuckerman.png',
+  },
+];
+
 // AI Tools data
 const aiTools = [
   {
@@ -328,87 +464,50 @@ export default function Home() {
         <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Section Header */}
           <FadeIn direction="up">
-            <div className="text-center mb-10 sm:mb-16">
+            <div className="text-center mb-6 sm:mb-10">
               <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
                 Advisory Council
               </h2>
+              <p className="text-base sm:text-lg text-white/70 max-w-3xl mx-auto mb-6">
+                In 2024, GIFT CONNECT (GC) had the honor to invite and engage 21 top-level USA and global early childhood development leaders, experts and scientists to help guide GC and collaborate to be transformational in impact.
+              </p>
               <div className="section-divider" />
             </div>
           </FadeIn>
 
-          {/* Advisory Council Images - Stacked Full Width */}
-          <div className="space-y-6 sm:space-y-12 max-w-6xl mx-auto">
-            <FadeIn direction="up">
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/advisory-council-1.webp"
-                  alt="Advisory Council Member 1"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
+          {/* Advisory Council Grid - Individual Member Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {councilMembers.map((member, index) => (
+              <ScaleIn key={member.name} delay={Math.min(index * 0.05, 0.5)}>
+                <div className="glass-card p-4 sm:p-6 h-full flex flex-col hover:border-yellow-400/40 transition-all duration-300">
+                  {/* Member Photo & Name */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden border-2 border-yellow-400/30">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={96}
+                        height={96}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg sm:text-xl font-bold text-white leading-tight">
+                        {member.name}
+                      </h3>
+                      <p className="text-yellow-400 text-sm sm:text-base font-medium mt-1 leading-snug">
+                        {member.title}
+                      </p>
+                    </div>
+                  </div>
 
-            <FadeIn direction="up" delay={0.1}>
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/advisory-council-2.webp"
-                  alt="Advisory Council Member 2"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.15}>
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/advisory-council-3.webp"
-                  alt="Advisory Council Member 3"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.2}>
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/advisory-council-4.webp"
-                  alt="Advisory Council Member 4"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.25}>
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/advisory-council-5.webp"
-                  alt="Advisory Council Member 5"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={0.3}>
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/advisory-council-6.webp"
-                  alt="Advisory Council Member 6"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
+                  {/* Bio */}
+                  <p className="text-white/60 text-sm leading-relaxed flex-grow">
+                    {member.bio}
+                  </p>
+                </div>
+              </ScaleIn>
+            ))}
           </div>
         </div>
       </section>
