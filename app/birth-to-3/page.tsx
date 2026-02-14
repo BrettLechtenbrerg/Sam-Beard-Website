@@ -210,10 +210,16 @@ export default function BirthToThree() {
           <FadeIn direction="up" delay={0.2}>
             <div className="glass-card p-6 sm:p-8 max-w-5xl mx-auto mb-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
-                {/* Photo Placeholder - Replace with actual photo when available */}
+                {/* Photo */}
                 <div className="flex justify-center lg:justify-start">
-                  <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-yellow-400/30 bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center">
-                    <span className="text-5xl sm:text-6xl font-bold text-black">JO</span>
+                  <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden border-2 border-yellow-400/30">
+                    <Image
+                      src="/images/leadership/judith-otter.png"
+                      alt="Judith Otter"
+                      width={224}
+                      height={224}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
 
@@ -240,24 +246,41 @@ export default function BirthToThree() {
 
           {/* The Team */}
           <FadeIn direction="up" delay={0.3}>
-            <div className="glass-card p-6 sm:p-8 max-w-4xl mx-auto mb-8">
-              <div className="text-center">
-                <h3 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">
-                  The Team
-                </h3>
-                <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6">
-                  <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
-                    Always Excellent
-                  </span>
-                  <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
-                    Result-Oriented
-                  </span>
-                  <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
-                    Passionate
-                  </span>
-                  <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
-                    Small and Growing
-                  </span>
+            <div className="glass-card p-6 sm:p-8 max-w-5xl mx-auto mb-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+                {/* Team Photo */}
+                <div className="rounded-xl overflow-hidden border-2 border-yellow-400/30">
+                  <Image
+                    src="/images/leadership/team.png"
+                    alt="GIFT Connect Team"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+
+                {/* Team Info */}
+                <div className="text-center lg:text-left">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">
+                    The Team
+                  </h3>
+                  <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-4">
+                    <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
+                      Always Excellent
+                    </span>
+                    <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
+                      Result-Oriented
+                    </span>
+                    <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
+                      Passionate
+                    </span>
+                    <span className="px-4 py-2 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-white font-medium">
+                      Small and Growing
+                    </span>
+                  </div>
+                  <p className="text-white/60 text-sm italic">
+                    Team meeting - April 2023
+                  </p>
                 </div>
               </div>
             </div>
