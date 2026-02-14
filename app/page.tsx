@@ -519,49 +519,74 @@ export default function Home() {
             </div>
           </FadeIn>
 
-          {/* Content */}
+          {/* Content with Photos */}
           <FadeIn direction="up" delay={0.2}>
-            <div className="glass-card p-6 sm:p-8 max-w-5xl mx-auto">
-              <div className="space-y-6">
-                <p className="text-white/70 text-base sm:text-lg leading-relaxed">
-                  Too many families are trapped in cycles of poverty, trauma, and adversity, often stretching back generations. These cycles impact brain development, school readiness, and emotional well-being.
-                </p>
-
-                <div className="border-l-4 border-yellow-400 pl-4 sm:pl-6">
-                  <p className="text-white text-lg sm:text-xl font-bold">
-                    At GIFT CONNECT, we believe parents are not the problem.
+            <div className="glass-card p-6 sm:p-8 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+                {/* Text Content - Takes 2 columns on large screens */}
+                <div className="lg:col-span-2 space-y-6">
+                  <p className="text-white/70 text-base sm:text-lg leading-relaxed">
+                    Too many families are trapped in cycles of poverty, trauma, and adversity, often stretching back generations. These cycles impact brain development, school readiness, and emotional well-being.
                   </p>
-                  <p className="text-yellow-400 text-lg sm:text-xl font-bold italic">
-                    They are the solution.
+
+                  <div className="border-l-4 border-yellow-400 pl-4 sm:pl-6">
+                    <p className="text-white text-lg sm:text-xl font-bold">
+                      At GIFT CONNECT, we believe parents are not the problem.
+                    </p>
+                    <p className="text-yellow-400 text-lg sm:text-xl font-bold italic">
+                      They are the solution.
+                    </p>
+                  </div>
+
+                  <p className="text-yellow-400/80 text-base sm:text-lg">
+                    Our trauma-informed approach empowers parents and caregivers with:
+                  </p>
+
+                  <ul className="space-y-3 text-white/70 text-base sm:text-lg">
+                    <li className="flex items-start gap-3">
+                      <span className="text-yellow-400 font-bold">•</span>
+                      <span><strong className="text-white">Healing tools</strong> for emotional resilience and generational recovery</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-yellow-400 font-bold">•</span>
+                      <span><strong className="text-white">Early development practices</strong> rooted in neuroscience</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-yellow-400 font-bold">•</span>
+                      <span><strong className="text-white">Leadership training</strong> to help caregivers become champions in their homes and communities</span>
+                    </li>
+                  </ul>
+
+                  <p className="text-white/80 text-base sm:text-lg font-medium">
+                    The impact: Stronger parents. Healthier children. Smarter communities.
+                  </p>
+
+                  <p className="text-yellow-400 text-lg sm:text-xl font-bold italic pt-4">
+                    Breaking the cycle isn&apos;t a dream. It&apos;s a plan — and it starts in the first 1,000 days.
                   </p>
                 </div>
 
-                <p className="text-yellow-400/80 text-base sm:text-lg">
-                  Our trauma-informed approach empowers parents and caregivers with:
-                </p>
-
-                <ul className="space-y-3 text-white/70 text-base sm:text-lg">
-                  <li className="flex items-start gap-3">
-                    <span className="text-yellow-400 font-bold">•</span>
-                    <span><strong className="text-white">Healing tools</strong> for emotional resilience and generational recovery</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-yellow-400 font-bold">•</span>
-                    <span><strong className="text-white">Early development practices</strong> rooted in neuroscience</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-yellow-400 font-bold">•</span>
-                    <span><strong className="text-white">Leadership training</strong> to help caregivers become champions in their homes and communities</span>
-                  </li>
-                </ul>
-
-                <p className="text-white/80 text-base sm:text-lg font-medium">
-                  The impact: Stronger parents. Healthier children. Smarter communities.
-                </p>
-
-                <p className="text-yellow-400 text-lg sm:text-xl font-bold italic text-center pt-4">
-                  Breaking the cycle isn&apos;t a dream. It&apos;s a plan — and it starts in the first 1,000 days.
-                </p>
+                {/* Photos - Stacked on right side */}
+                <div className="space-y-4">
+                  <div className="rounded-xl overflow-hidden border-2 border-yellow-400/30">
+                    <Image
+                      src="/images/literacy/children-reading.png"
+                      alt="Children reading together"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                  <div className="rounded-xl overflow-hidden border-2 border-yellow-400/30">
+                    <Image
+                      src="/images/literacy/family-generations.png"
+                      alt="Multi-generational family"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </FadeIn>
