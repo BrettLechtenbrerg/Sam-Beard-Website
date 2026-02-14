@@ -1,6 +1,6 @@
 # Sam Beard Website - Ultimate Restart Prompt
-**Last Updated:** February 11, 2026 @ 3:40 PM MST
-**Current Commit:** f35cc46
+**Last Updated:** February 14, 2026 @ 8:00 AM MST
+**Current Commit:** 9563fff
 
 ---
 
@@ -78,7 +78,7 @@ Both local folders deploy to the SAME Vercel project and GitHub repo. Always run
 5. **Get Started** - 2 full-width stacked images:
    - Six Loving Habits infographic
    - Legacy of Literacy
-6. **Advisory Council** - 6 full-width stacked images (advisory-council-1 through 6)
+6. **Advisory Council** - 22 individual member cards in responsive grid (3-col desktop, 2-col tablet, 1-col mobile) with photos, names, titles, and bios
 
 ### ✅ Birth To 3 Page (`/birth-to-3`) - COMPLETE
 
@@ -145,14 +145,31 @@ samb-website1/
 │   ├── sam-beard.png           # Sam's photo (from desktop)
 │   ├── six-loving-habits.webp  # Infographic
 │   ├── legacy-of-literacy.webp # Infographic
-│   ├── advisory-council-1.webp # Council member 1
-│   ├── advisory-council-2.webp # Council member 2
-│   ├── advisory-council-3.webp # Council member 3
-│   ├── advisory-council-4.webp # Council member 4
-│   ├── advisory-council-5.webp # Council member 5
-│   ├── advisory-council-6.webp # Council member 6
 │   ├── help-america-1.webp     # America in Crisis image 1
-│   └── help-america-2.webp     # America in Crisis image 2
+│   ├── help-america-2.webp     # America in Crisis image 2
+│   └── council/                # ⭐ 22 Advisory Council member photos
+│       ├── sam-beard.png
+│       ├── david-bray.png
+│       ├── dave-dennis.png
+│       ├── bill-milliken.png
+│       ├── donna-norton.png
+│       ├── sarah-rittling.png
+│       ├── mark-sadovnick.png
+│       ├── eric-sapp.png
+│       ├── maria-snyder.png
+│       ├── jose-antonio-tijerino.png
+│       ├── cindy-minton-walker.png
+│       ├── rebecca-kelley.png
+│       ├── terry-lierman.png
+│       ├── dr-suzanne-mayo.png
+│       ├── matthew-melmed.png
+│       ├── libby-doggett.png
+│       ├── kathy-eldon.png
+│       ├── dr-cyndie-hatcher.png
+│       ├── bawa-jain.png
+│       ├── carolyn-wall.png
+│       ├── kathryn-way.png
+│       └── dr-barry-zuckerman.png
 ├── CLAUDE.md                   # Project instructions
 ├── RESTART-PROMPT-SAM-BEARD.md # This file
 ├── package.json
@@ -297,6 +314,9 @@ git fetch origin && git reset --hard origin/main
 1. **Birth To 3 Quote** - Sam's quote on Birth To 3 page is placeholder text
 2. **Rupert Hitzig Photo** - Currently shows "RH" initials, needs actual photo
 
+### Recently Completed (Feb 14, 2026):
+- ✅ **Advisory Council Redesign** - Replaced 6 stacked images with 22 individual member cards featuring photos, names, titles, and bios in a responsive grid layout
+
 ### Potential Future Pages:
 - More GIFT Connect content pages
 - Event calendar
@@ -355,7 +375,7 @@ Check both folders are synced:
 ```bash
 cd /Users/brettlechtenberg/Documents/agent-girl/samb-website1 && git log --oneline -1
 cd "/Users/brettlechtenberg/Desktop/Claude Projects/Sam-Beard-Website" && git log --oneline -1
-# Both should show same commit hash: f35cc46
+# Both should show same commit hash: 9563fff
 ```
 
 ---
@@ -363,6 +383,7 @@ cd "/Users/brettlechtenberg/Desktop/Claude Projects/Sam-Beard-Website" && git lo
 ## GIT HISTORY
 
 ```
+9563fff Redesign Advisory Council with 22 individual member cards
 f35cc46 Add comprehensive mobile optimizations for 100% responsive design
 4ed92f8 Add AI mascot images to tool cards
 4a45cbf Add project documentation and restart prompt

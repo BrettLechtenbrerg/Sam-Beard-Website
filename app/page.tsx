@@ -142,6 +142,40 @@ const councilMembers = [
   },
 ];
 
+// Six Loving Habits - Science Proven
+const lovingHabits = [
+  {
+    name: 'Speak',
+    description: 'Talk to your baby all the time. Every word grows their brain.',
+    image: '/images/habits/speak.png',
+  },
+  {
+    name: 'Sing',
+    description: 'Songs build language, rhythm, emotion... and trust.',
+    image: '/images/habits/sing.png',
+  },
+  {
+    name: 'Read',
+    description: 'Reading together boosts imagination, vocabulary, and connection.',
+    image: '/images/habits/read.png',
+  },
+  {
+    name: 'Play',
+    description: 'Free play builds creativity, problem-solving and resilience.',
+    image: '/images/habits/play.png',
+  },
+  {
+    name: 'Count',
+    description: 'Early math teaches pattern recognition and logic.',
+    image: '/images/habits/count.png',
+  },
+  {
+    name: 'Serve & Return',
+    description: 'Respond to your baby\'s cues. Baby responds to your actions. Connection is the core of learning.',
+    image: '/images/habits/serve-return.png',
+  },
+];
+
 // AI Tools data
 const aiTools = [
   {
@@ -410,48 +444,127 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════════════
-          GET STARTED / PARTNERS SECTION
+          SIX LOVING HABITS SECTION
           ═══════════════════════════════════════════════════════════════════════════ */}
       <section className="relative w-full py-16 sm:py-24 lg:py-32">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Section Header */}
           <FadeIn direction="up">
-            <div className="text-center mb-10 sm:mb-16">
-              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-4">
-                Get Started
+            <div className="text-center mb-6 sm:mb-10">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-2">
+                Six Loving Habits
               </h2>
+              <p className="text-xl sm:text-2xl text-yellow-400 font-medium mb-4">
+                Science Proven
+              </p>
+              <p className="text-lg sm:text-xl text-white/80 font-medium mb-4">
+                Six Habits. One Foundation. Parents With Love.
+              </p>
+              <p className="text-base sm:text-lg text-white/60 max-w-3xl mx-auto mb-6">
+                Early learning isn&apos;t built in classrooms — it&apos;s built in living rooms, kitchens and bedtime routines with parents. The &quot;Loving Habits&quot; make learning joyful, natural, and powerful.
+              </p>
               <div className="section-divider" />
             </div>
           </FadeIn>
 
-          {/* Feature Images - Stacked Full Width */}
-          <div className="space-y-6 sm:space-y-12 max-w-6xl mx-auto">
-            {/* Six Loving Habits */}
-            <FadeIn direction="up">
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/six-loving-habits.webp"
-                  alt="Six Loving Habits - Science Proven: Speak, Sing, Read, Play, Count, Serve & Return"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
+          {/* Six Loving Habits Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 max-w-6xl mx-auto">
+            {lovingHabits.map((habit, index) => (
+              <ScaleIn key={habit.name} delay={index * 0.1}>
+                <div className="glass-card p-3 sm:p-4 h-full flex flex-col items-center text-center hover:border-yellow-400/40 transition-all duration-300">
+                  {/* Habit Image */}
+                  <div className="w-full aspect-square rounded-xl overflow-hidden border-2 border-yellow-400/30 mb-3">
+                    <Image
+                      src={habit.image}
+                      alt={habit.name}
+                      width={200}
+                      height={200}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
 
-            {/* Legacy of Literacy */}
-            <FadeIn direction="up" delay={0.2}>
-              <div className="glass-card p-3 sm:p-6 overflow-hidden hover:border-yellow-400/30">
-                <Image
-                  src="/images/legacy-of-literacy.webp"
-                  alt="Legacy of Literacy"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto rounded-xl"
-                />
-              </div>
-            </FadeIn>
+                  {/* Habit Name */}
+                  <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-2">
+                    {habit.name}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-white/60 text-xs sm:text-sm leading-relaxed">
+                    {habit.description}
+                  </p>
+                </div>
+              </ScaleIn>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════════════════
+          LEGACY OF LITERACY SECTION
+          ═══════════════════════════════════════════════════════════════════════════ */}
+      <section className="relative w-full py-16 sm:py-24 lg:py-32">
+        <div className="absolute inset-0 mesh-gradient opacity-30" />
+
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          {/* Section Header */}
+          <FadeIn direction="up">
+            <div className="text-center mb-6 sm:mb-10">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-2">
+                Legacy Of Literacy
+              </h2>
+              <p className="text-xl sm:text-2xl text-yellow-400 font-medium mb-6">
+                Breaking the Cycles of Trauma and Poverty
+              </p>
+              <div className="section-divider" />
+            </div>
+          </FadeIn>
+
+          {/* Content */}
+          <FadeIn direction="up" delay={0.2}>
+            <div className="glass-card p-6 sm:p-8 max-w-5xl mx-auto">
+              <div className="space-y-6">
+                <p className="text-white/70 text-base sm:text-lg leading-relaxed">
+                  Too many families are trapped in cycles of poverty, trauma, and adversity, often stretching back generations. These cycles impact brain development, school readiness, and emotional well-being.
+                </p>
+
+                <div className="border-l-4 border-yellow-400 pl-4 sm:pl-6">
+                  <p className="text-white text-lg sm:text-xl font-bold">
+                    At GIFT CONNECT, we believe parents are not the problem.
+                  </p>
+                  <p className="text-yellow-400 text-lg sm:text-xl font-bold italic">
+                    They are the solution.
+                  </p>
+                </div>
+
+                <p className="text-yellow-400/80 text-base sm:text-lg">
+                  Our trauma-informed approach empowers parents and caregivers with:
+                </p>
+
+                <ul className="space-y-3 text-white/70 text-base sm:text-lg">
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-400 font-bold">•</span>
+                    <span><strong className="text-white">Healing tools</strong> for emotional resilience and generational recovery</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-400 font-bold">•</span>
+                    <span><strong className="text-white">Early development practices</strong> rooted in neuroscience</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-yellow-400 font-bold">•</span>
+                    <span><strong className="text-white">Leadership training</strong> to help caregivers become champions in their homes and communities</span>
+                  </li>
+                </ul>
+
+                <p className="text-white/80 text-base sm:text-lg font-medium">
+                  The impact: Stronger parents. Healthier children. Smarter communities.
+                </p>
+
+                <p className="text-yellow-400 text-lg sm:text-xl font-bold italic text-center pt-4">
+                  Breaking the cycle isn&apos;t a dream. It&apos;s a plan — and it starts in the first 1,000 days.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
