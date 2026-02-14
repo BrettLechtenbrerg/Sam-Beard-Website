@@ -1,6 +1,6 @@
 # Sam Beard Website - Ultimate Restart Prompt
-**Last Updated:** February 14, 2026 @ 8:10 AM MST
-**Current Commit:** a41dbed
+**Last Updated:** February 14, 2026 @ 9:20 AM MST
+**Current Commit:** 77172d0
 
 ---
 
@@ -60,7 +60,7 @@ Both local folders deploy to the SAME Vercel project and GitHub repo. Always run
 
 ---
 
-## CURRENT STATE (as of Feb 14, 2026 @ 8:05 AM)
+## CURRENT STATE (as of Feb 14, 2026 @ 9:20 AM)
 
 ### ✅ Home Page (`/`) - COMPLETE
 
@@ -73,7 +73,7 @@ Both local folders deploy to the SAME Vercel project and GitHub repo. Always run
 3. **Music & Edutainment** - 2 YouTube videos side-by-side:
    - Abujubuju baby (qnb8-EeRuIY)
    - Second video (w2PN3aTl644)
-   - Rupert Hitzig quote (GC Creative Director)
+   - **Sam Beard quote** with photo (Founder & Chairman)
 4. **Think Big! Yes We Can!** - YouTube video (ECBTbTntOLE)
 5. **Six Loving Habits** - 6 individual cards in responsive grid (6-col desktop, 3-col tablet, 2-col mobile):
    - Speak, Sing, Read, Play, Count, Serve & Return
@@ -138,8 +138,8 @@ Both local folders deploy to the SAME Vercel project and GitHub repo. Always run
 samb-website1/
 ├── app/
 │   ├── layout.tsx              # Root layout, fonts (Montserrat + Open Sans)
-│   ├── page.tsx                # ⭐ Home page with all 6 sections
-│   ├── birth-to-3/page.tsx     # ⭐ Birth To 3 page
+│   ├── page.tsx                # ⭐ Home page with all 7 sections
+│   ├── birth-to-3/page.tsx     # ⭐ Birth To 3 page with 5 sections
 │   ├── globals.css             # Glassmorphic design system + mobile optimizations
 │   ├── icon.png                # Favicon
 │   └── apple-icon.png          # Apple touch icon
@@ -152,7 +152,28 @@ samb-website1/
 ├── public/images/
 │   ├── sam-beard.png           # Sam's photo (from desktop)
 │   ├── council/                # ⭐ 22 Advisory Council member photos
-│   │   └── [22 member photos]
+│   │   ├── sam-beard.png
+│   │   ├── david-bray.png
+│   │   ├── dave-dennis.png
+│   │   ├── bill-milliken.png
+│   │   ├── donna-norton.png
+│   │   ├── sarah-rittling.png
+│   │   ├── mark-sadovnick.png
+│   │   ├── eric-sapp.png
+│   │   ├── maria-snyder.png
+│   │   ├── jose-antonio-tijerino.png
+│   │   ├── cindy-minton-walker.png
+│   │   ├── rebecca-kelley.png
+│   │   ├── terry-lierman.png
+│   │   ├── dr-suzanne-mayo.png
+│   │   ├── matthew-melmed.png
+│   │   ├── libby-doggett.png
+│   │   ├── kathy-eldon.png
+│   │   ├── dr-cyndie-hatcher.png
+│   │   ├── bawa-jain.png
+│   │   ├── carolyn-wall.png
+│   │   ├── kathryn-way.png
+│   │   └── dr-barry-zuckerman.png
 │   ├── habits/                 # ⭐ 6 Loving Habits photos
 │   │   ├── speak.png
 │   │   ├── sing.png
@@ -309,9 +330,10 @@ git fetch origin && git reset --hard origin/main
 ## REMAINING WORK / FUTURE ENHANCEMENTS
 
 ### Placeholders Still Needing Real Content:
-1. **Birth To 3 Quote** - Sam's quote on Birth To 3 page is placeholder text
+1. **Birth To 3 Quote** - Sam's quote on Birth To 3 page is placeholder text (line 121-124 in birth-to-3/page.tsx)
 
 ### Recently Completed (Feb 14, 2026):
+- ✅ **Sam Beard in Music & Edutainment** - Replaced Rupert Hitzig with Sam Beard photo and quote
 - ✅ **Advisory Council Redesign** - Replaced 6 stacked images with 22 individual member cards
 - ✅ **Six Loving Habits Redesign** - 6 individual cards with photos (Speak, Sing, Read, Play, Count, Serve & Return)
 - ✅ **Legacy of Literacy Redesign** - 2-column layout with text and photos
@@ -320,7 +342,6 @@ git fetch origin && git reset --hard origin/main
   - Leadership section (Judith Otter bio, Team photo, Historical photos)
   - Ethel Kennedy quote
 - ✅ **CTA Button Update** - Gold styling, links to /#ai-tools
-- ✅ **Rupert Hitzig Photo** - Added actual photo replacing "RH" initials placeholder
 
 ### Potential Future Pages:
 - More GIFT Connect content pages
@@ -339,9 +360,6 @@ git fetch origin && git reset --hard origin/main
 
 **To update Sam's quote on Birth To 3:**
 > "Update Sam Beard's quote on the Birth To 3 page to: [new quote text]"
-
-**To add Rupert Hitzig's photo:**
-> "Replace the RH initials with Rupert's actual photo. Here's the image: [path or URL]"
 
 **To add a new section:**
 > "Add a new section called [name] to the home page with [description]"
@@ -362,6 +380,7 @@ git fetch origin && git reset --hard origin/main
 Check current git status:
 ```bash
 git log --oneline -1
+# Should show: 77172d0 Replace Rupert Hitzig with Sam Beard in Music & Edutainment section
 ```
 
 Count pages:
@@ -370,37 +389,56 @@ find /Users/brettlechtenberg/Documents/agent-girl/samb-website1/app -name "page.
 # Should return 2 (home + birth-to-3)
 ```
 
-Count images:
-```bash
-ls /Users/brettlechtenberg/Documents/agent-girl/samb-website1/public/images/ | wc -l
-# Should return 10
-```
-
 Check both folders are synced:
 ```bash
 cd /Users/brettlechtenberg/Documents/agent-girl/samb-website1 && git log --oneline -1
 cd "/Users/brettlechtenberg/Desktop/Claude Projects/Sam-Beard-Website" && git log --oneline -1
-# Both should show same commit hash: a41dbed
+# Both should show same commit hash: 77172d0
 ```
 
 ---
 
-## GIT HISTORY
+## GIT HISTORY (Latest 10)
 
 ```
+77172d0 Replace Rupert Hitzig with Sam Beard in Music & Edutainment section
 a41dbed Add Rupert Hitzig photo to Music & Edutainment section
 6518dbf Update Explore Our Tools button to gold styling with AI tools link
 cd3419f Add historical photos section to Leadership
 a7f4f3d Add Judith Otter and team photos to Leadership section
 c129182 Redesign Birth to 3 page with stat cards and Leadership section
 1da884a Add photos to Legacy of Literacy section
-(earlier commits...)
+358cd1e Redesign Six Loving Habits with individual cards and Legacy of Literacy section
 9563fff Redesign Advisory Council with 22 individual member cards
-f35cc46 Add comprehensive mobile optimizations for 100% responsive design
-4ed92f8 Add AI mascot images to tool cards
-4a45cbf Add project documentation and restart prompt
-8764bc5 Initial commit - Sam Beard Website
+babb7fc Update restart prompt with mobile optimization details
 ```
+
+---
+
+## ADVISORY COUNCIL MEMBERS (22 Total)
+
+1. Sam Beard - Founder
+2. David Bray - Principal, LeadDoAdapt Ventures
+3. Dave Dennis - President Emeritus
+4. Bill Milliken - Founder & Chairman, Communities in Schools
+5. Donna Norton - Executive VP, MomsRising
+6. Sarah Rittling - Executive Director, First Five Years Fund
+7. Mark Sadovnick - Managing Partner, 5th Element Group
+8. Eric Sapp - Founder & President, Public Democracy
+9. Maria Snyder - Artist, Eco-Entrepreneur
+10. Jose Antonio Tijerino - President & CEO, Hispanic Heritage Foundation
+11. Cindy Minton Walker - Early Childhood Development Leader
+12. Rebecca Kelley - Executive VP, Waterford.org
+13. Terry Lierman - Former Staff Director, US Senate
+14. Dr. Suzanne Mayo - Professor, Grambling State University
+15. Matthew Melmed - Executive Director, ZERO TO THREE
+16. Libby Doggett, PhD - Former Deputy Assistant Secretary, USDOE
+17. Kathy Eldon - Author, Film Producer
+18. Dr. Cyndie Hatcher, MD, MPH - Board Certified Pediatrician
+19. Bawa Jain - Founder President, Centre for Responsible Leadership
+20. Carolyn Wall - Senior Media Executive
+21. Kathryn Way - Early Childhood Development Expert
+22. Dr. Barry Zuckerman - Professor & Chair Emeritus, Boston University
 
 ---
 

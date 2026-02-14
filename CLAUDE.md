@@ -4,19 +4,21 @@
 
 **Sam Beard / GIFT Connect Website**
 - Early childhood education advocacy site
-- AI-powered parenting tools
+- AI-powered parenting tools (Sammie, Geno, Stacy)
 - Black/Gold/White glassmorphic design
+- 2 pages: Home + Birth To 3
 
 ## Quick Start
 
 ```bash
 cd /Users/brettlechtenberg/Documents/agent-girl/samb-website1
 npm run dev
+# Open http://localhost:3000
 ```
 
 ## Project Locations
 
-### Primary Location:
+### Primary Location (USE THIS):
 ```
 /Users/brettlechtenberg/Documents/agent-girl/samb-website1
 ```
@@ -37,7 +39,7 @@ npm run dev
 |------------|---------|-------|
 | Next.js | 16.1.6 | App Router |
 | React | 19 | Latest |
-| Tailwind CSS | 3.4 | Glassmorphic design |
+| Tailwind CSS | 3.4 | **USE v3, NOT v4** |
 | Framer Motion | Latest | Animations |
 | TypeScript | Latest | Type safety |
 | Deployment | Vercel | CLI workflow only |
@@ -52,17 +54,19 @@ npm run dev
 
 ### Home (`/`)
 1. Hero - "Join Us NOW To Save Our Children" + Vimeo video
-2. AI Tools - 3 tool cards (Parenting Assistant, Song Generator, Story Generator)
-3. Music & Edutainment - 2 YouTube videos + Rupert Hitzig quote
+2. AI For Good - 3 tool cards (Sammie, Geno, Stacy) with mascot images
+3. Music & Edutainment - 2 YouTube videos + Sam Beard quote
 4. Think Big! Yes We Can! - YouTube video
-5. Get Started - Six Loving Habits + Legacy of Literacy images
-6. Advisory Council - 6 council member images
+5. Six Loving Habits - 6 individual cards with photos
+6. Legacy of Literacy - 2-column with text + photos
+7. Advisory Council - 22 individual member cards
 
 ### Birth To 3 (`/birth-to-3`)
 1. Hero - Sam Beard photo + quote
-2. America in Crisis - 2 Help America images
-3. Key Facts - Brain development stats
-4. CTA - Explore Our Tools
+2. America's Economy & Workforce - 6 stat cards
+3. Leadership - Judith Otter bio, Team photo, Historical photos
+4. Key Facts - 90%, 1M+, 65K stats
+5. CTA - Explore Our Tools
 
 ### Contact
 - External link to gift-connect.org/contact-us/
@@ -73,8 +77,8 @@ npm run dev
 samb-website1/
 ├── app/
 │   ├── layout.tsx           # Root layout, fonts, metadata
-│   ├── page.tsx             # Home page (all sections)
-│   ├── birth-to-3/page.tsx  # Birth To 3 page
+│   ├── page.tsx             # Home page (7 sections)
+│   ├── birth-to-3/page.tsx  # Birth To 3 page (5 sections)
 │   ├── globals.css          # Glassmorphic design system
 │   ├── icon.png             # Favicon
 │   └── apple-icon.png       # Apple touch icon
@@ -86,10 +90,10 @@ samb-website1/
 │       └── ScaleIn.tsx      # Scale animation
 ├── public/images/
 │   ├── sam-beard.png        # Sam's photo
-│   ├── six-loving-habits.webp
-│   ├── legacy-of-literacy.webp
-│   ├── advisory-council-1-6.webp
-│   └── help-america-1-2.webp
+│   ├── council/             # 22 Advisory Council photos
+│   ├── habits/              # 6 Loving Habits photos
+│   ├── literacy/            # Legacy of Literacy photos
+│   └── leadership/          # Leadership section photos
 └── RESTART-PROMPT-SAM-BEARD.md  # Ultimate restart prompt
 ```
 
@@ -99,18 +103,22 @@ samb-website1/
 # 1. Navigate to project
 cd /Users/brettlechtenberg/Documents/agent-girl/samb-website1
 
-# 2. Make changes and test
+# 2. Check status and sync
+git fetch origin && git status
+# If behind: git pull origin main
+
+# 3. Make changes and test
 npm run dev
 
-# 3. Build and verify
+# 4. Build and verify
 npm run build
 
-# 4. Commit and push
+# 5. Commit and push
 git add -A
 git commit -m "Your message"
 git push origin main
 
-# 5. Deploy to Vercel
+# 6. Deploy to Vercel
 vercel --prod --yes
 ```
 
@@ -126,19 +134,18 @@ vercel --prod --yes
 1. **Use Vercel CLI** - Always deploy with `vercel --prod --yes`
 2. **Sam Beard Logo** - From GoHighLevel CDN (external URL in Navigation.tsx)
 3. **Tailwind v3** - Do not upgrade to v4
-4. **Two Folders** - Keep primary and backup synced
+4. **Two Folders** - Keep primary and backup synced with git
+5. **Mobile Optimized** - Test on mobile after changes
 
-## Core Principles
+## Remaining Work
 
-### Be Concise & Direct
-- Answer directly without unnecessary preamble
-- Match response length to question complexity
+1. **Birth To 3 Quote** - Sam's quote is placeholder text (line 121-124)
 
-### Research & Analysis
-- Verify facts before stating them
-- Ask clarifying questions rather than assuming
+## For Full Details
 
-### Problem-Solving
-1. Understand the full context before answering
-2. Break down complex questions into manageable parts
-3. Provide practical, actionable solutions
+See: `RESTART-PROMPT-SAM-BEARD.md` for complete documentation including:
+- All 22 Advisory Council members
+- Video IDs and URLs
+- Mobile optimization details
+- Git history
+- Sample prompts for continuing work
