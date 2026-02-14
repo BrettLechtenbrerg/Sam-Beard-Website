@@ -405,10 +405,10 @@ export default function BirthToThree() {
                 during the most important years of a child&apos;s development.
               </p>
               <motion.a
-                href="/"
+                href="/#ai-tools"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-glow inline-flex"
+                className="btn-primary inline-flex"
               >
                 Explore Our Tools
               </motion.a>
