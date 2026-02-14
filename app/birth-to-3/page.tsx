@@ -286,8 +286,45 @@ export default function BirthToThree() {
             </div>
           </FadeIn>
 
-          {/* Ethel Kennedy Quote */}
+          {/* Historical Photos */}
           <FadeIn direction="up" delay={0.4}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto mb-10">
+              {/* President Bush Photo */}
+              <div className="glass-card p-4 sm:p-6">
+                <div className="rounded-xl overflow-hidden border-2 border-yellow-400/30 mb-4">
+                  <Image
+                    src="/images/leadership/sam-bush-2002.png"
+                    alt="President Bush with Sam - 2002"
+                    width={500}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <p className="text-white/80 text-center font-medium italic">
+                  President Bush with Sam - 2002
+                </p>
+              </div>
+
+              {/* Kennedy Gala Photo */}
+              <div className="glass-card p-4 sm:p-6">
+                <div className="rounded-xl overflow-hidden border-2 border-yellow-400/30 mb-4">
+                  <Image
+                    src="/images/leadership/sam-kennedy-2012.png"
+                    alt="Lesley Stahl, Ethel Kennedy, Sam, Eunice Shriver and Michael Keaton - 2012"
+                    width={500}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <p className="text-white/80 text-center font-medium italic">
+                  Lesley Stahl, Ethel Kennedy, Sam, Eunice Shriver and Michael Keaton - 2012
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Ethel Kennedy Quote */}
+          <FadeIn direction="up" delay={0.5}>
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-xl sm:text-2xl text-white/80 italic leading-relaxed mb-4">
                 &quot;Sam is one of the ripples of hope that Bobby believed were the power of people to advance justice and peace.&quot;
