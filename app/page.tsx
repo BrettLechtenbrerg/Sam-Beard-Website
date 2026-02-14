@@ -389,15 +389,15 @@ export default function Home() {
                 <div className="flex-shrink-0 text-center sm:text-left">
                   <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-yellow-400/30 mx-auto sm:mx-0">
                     <Image
-                      src="/images/rupert-hitzig.jpg"
-                      alt="Rupert Hitzig"
+                      src="/images/council/sam-beard.png"
+                      alt="Sam Beard"
                       width={80}
                       height={80}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-yellow-400 text-sm font-medium mt-3">GC Creative Director</p>
-                  <h3 className="text-xl font-bold text-white">Rupert Hitzig</h3>
+                  <p className="text-yellow-400 text-sm font-medium mt-3">Founder & Chairman</p>
+                  <h3 className="text-xl font-bold text-white">Sam Beard</h3>
                 </div>
 
                 {/* Quote */}
