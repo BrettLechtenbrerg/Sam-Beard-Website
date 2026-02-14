@@ -387,8 +387,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 {/* Profile */}
                 <div className="flex-shrink-0 text-center sm:text-left">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-amber-600 flex items-center justify-center text-black font-bold text-2xl mx-auto sm:mx-0">
-                    RH
+                  <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-yellow-400/30 mx-auto sm:mx-0">
+                    <Image
+                      src="/images/rupert-hitzig.jpg"
+                      alt="Rupert Hitzig"
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <p className="text-yellow-400 text-sm font-medium mt-3">GC Creative Director</p>
                   <h3 className="text-xl font-bold text-white">Rupert Hitzig</h3>

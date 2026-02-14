@@ -1,6 +1,6 @@
 # Sam Beard Website - Ultimate Restart Prompt
-**Last Updated:** February 14, 2026 @ 8:00 AM MST
-**Current Commit:** 9563fff
+**Last Updated:** February 14, 2026 @ 8:05 AM MST
+**Current Commit:** 6518dbf
 
 ---
 
@@ -60,13 +60,13 @@ Both local folders deploy to the SAME Vercel project and GitHub repo. Always run
 
 ---
 
-## CURRENT STATE (as of Feb 11, 2026 @ 3:40 PM)
+## CURRENT STATE (as of Feb 14, 2026 @ 8:05 AM)
 
 ### ✅ Home Page (`/`) - COMPLETE
 
 **Sections in order:**
 1. **Hero** - "Join Us NOW To Save Our Children" headline + Vimeo video (832805208)
-2. **AI For Good** - 3 tool cards with mascot images:
+2. **AI For Good** (id="ai-tools") - 3 tool cards with mascot images:
    - ✅ **Sammie** (Parenting Assistant) → https://voiceassistant.gift-connect.org/org/
    - ✅ **Geno** (Song Generator) → https://newsonggenerator.gift-connect.org/
    - ✅ **Stacy** (Story Generator) → https://storygenerator.gift-connect.org/
@@ -75,23 +75,31 @@ Both local folders deploy to the SAME Vercel project and GitHub repo. Always run
    - Second video (w2PN3aTl644)
    - Rupert Hitzig quote (GC Creative Director)
 4. **Think Big! Yes We Can!** - YouTube video (ECBTbTntOLE)
-5. **Get Started** - 2 full-width stacked images:
-   - Six Loving Habits infographic
-   - Legacy of Literacy
-6. **Advisory Council** - 22 individual member cards in responsive grid (3-col desktop, 2-col tablet, 1-col mobile) with photos, names, titles, and bios
+5. **Six Loving Habits** - 6 individual cards in responsive grid (6-col desktop, 3-col tablet, 2-col mobile):
+   - Speak, Sing, Read, Play, Count, Serve & Return
+6. **Legacy of Literacy** - 2-column layout with text + photos (children-reading.png, family-generations.png)
+7. **Advisory Council** - 22 individual member cards in responsive grid (3-col desktop, 2-col tablet, 1-col mobile) with photos, names, titles, and bios
 
 ### ✅ Birth To 3 Page (`/birth-to-3`) - COMPLETE
 
 **Sections in order:**
 1. **Hero** - Sam Beard photo + quote (side by side on desktop)
-2. **America in Crisis** - 2 full-width stacked images:
-   - Help America 1
-   - Help America 2
-3. **Key Facts** - 3 stat cards:
+2. **America's Economy & Workforce** - 6 stat cards with icons:
+   - 1/3 Not Workforce Ready (StriveTogether.org; OECD)
+   - 34th OECD Ranking
+   - $2.2T Lost GDP Potential (Barbara Bush Foundation)
+   - 13% Return on Investment (James Heckman)
+   - 1.2M Annual Dropouts
+   - <2% Pre-Primary Budgets (UNICEF)
+3. **Leadership** - Judith Otter bio with photo + Team section with photo + Historical photos:
+   - President Bush with Sam - 2002
+   - Lesley Stahl, Ethel Kennedy, Sam, Eunice Shriver and Michael Keaton - 2012
+   - Ethel Kennedy quote
+4. **Key Facts** - 3 stat cards:
    - 90% brain development in first 3 years
    - 1M+ neural connections per second
    - 65K mothers impacted
-4. **CTA** - "Ready to Make a Difference?" with button to home page
+5. **CTA** - "Ready to Make a Difference?" with gold button linking to /#ai-tools
 
 ### ✅ Navigation
 - Sam Beard logo (from GoHighLevel CDN)
@@ -143,33 +151,23 @@ samb-website1/
 │       └── ScaleIn.tsx         # Scale-in animation component
 ├── public/images/
 │   ├── sam-beard.png           # Sam's photo (from desktop)
-│   ├── six-loving-habits.webp  # Infographic
-│   ├── legacy-of-literacy.webp # Infographic
-│   ├── help-america-1.webp     # America in Crisis image 1
-│   ├── help-america-2.webp     # America in Crisis image 2
-│   └── council/                # ⭐ 22 Advisory Council member photos
-│       ├── sam-beard.png
-│       ├── david-bray.png
-│       ├── dave-dennis.png
-│       ├── bill-milliken.png
-│       ├── donna-norton.png
-│       ├── sarah-rittling.png
-│       ├── mark-sadovnick.png
-│       ├── eric-sapp.png
-│       ├── maria-snyder.png
-│       ├── jose-antonio-tijerino.png
-│       ├── cindy-minton-walker.png
-│       ├── rebecca-kelley.png
-│       ├── terry-lierman.png
-│       ├── dr-suzanne-mayo.png
-│       ├── matthew-melmed.png
-│       ├── libby-doggett.png
-│       ├── kathy-eldon.png
-│       ├── dr-cyndie-hatcher.png
-│       ├── bawa-jain.png
-│       ├── carolyn-wall.png
-│       ├── kathryn-way.png
-│       └── dr-barry-zuckerman.png
+│   ├── council/                # ⭐ 22 Advisory Council member photos
+│   │   └── [22 member photos]
+│   ├── habits/                 # ⭐ 6 Loving Habits photos
+│   │   ├── speak.png
+│   │   ├── sing.png
+│   │   ├── read.png
+│   │   ├── play.png
+│   │   ├── count.png
+│   │   └── serve-return.png
+│   ├── literacy/               # Legacy of Literacy photos
+│   │   ├── children-reading.png
+│   │   └── family-generations.png
+│   └── leadership/             # ⭐ Leadership section photos
+│       ├── judith-otter.png
+│       ├── team.png
+│       ├── sam-bush-2002.png
+│       └── sam-kennedy-2012.png
 ├── CLAUDE.md                   # Project instructions
 ├── RESTART-PROMPT-SAM-BEARD.md # This file
 ├── package.json
@@ -315,7 +313,14 @@ git fetch origin && git reset --hard origin/main
 2. **Rupert Hitzig Photo** - Currently shows "RH" initials, needs actual photo
 
 ### Recently Completed (Feb 14, 2026):
-- ✅ **Advisory Council Redesign** - Replaced 6 stacked images with 22 individual member cards featuring photos, names, titles, and bios in a responsive grid layout
+- ✅ **Advisory Council Redesign** - Replaced 6 stacked images with 22 individual member cards
+- ✅ **Six Loving Habits Redesign** - 6 individual cards with photos (Speak, Sing, Read, Play, Count, Serve & Return)
+- ✅ **Legacy of Literacy Redesign** - 2-column layout with text and photos
+- ✅ **Birth to 3 Page Overhaul**:
+  - America's Economy & Workforce section with 6 stat cards
+  - Leadership section (Judith Otter bio, Team photo, Historical photos)
+  - Ethel Kennedy quote
+- ✅ **CTA Button Update** - Gold styling, links to /#ai-tools
 
 ### Potential Future Pages:
 - More GIFT Connect content pages
@@ -375,7 +380,7 @@ Check both folders are synced:
 ```bash
 cd /Users/brettlechtenberg/Documents/agent-girl/samb-website1 && git log --oneline -1
 cd "/Users/brettlechtenberg/Desktop/Claude Projects/Sam-Beard-Website" && git log --oneline -1
-# Both should show same commit hash: 9563fff
+# Both should show same commit hash: 6518dbf
 ```
 
 ---
@@ -383,6 +388,12 @@ cd "/Users/brettlechtenberg/Desktop/Claude Projects/Sam-Beard-Website" && git lo
 ## GIT HISTORY
 
 ```
+6518dbf Update Explore Our Tools button to gold styling with AI tools link
+cd3419f Add historical photos section to Leadership
+a7f4f3d Add Judith Otter and team photos to Leadership section
+c129182 Redesign Birth to 3 page with stat cards and Leadership section
+1da884a Add photos to Legacy of Literacy section
+(earlier commits...)
 9563fff Redesign Advisory Council with 22 individual member cards
 f35cc46 Add comprehensive mobile optimizations for 100% responsive design
 4ed92f8 Add AI mascot images to tool cards
